@@ -1,6 +1,7 @@
 import { wrapFunction } from "do-functions";
 import { z } from "zod";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function sample(args: Record<string, any>) {
   if (args.http.method !== "POST") {
     throw new Error("Method not allowed");

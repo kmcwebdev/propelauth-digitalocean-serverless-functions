@@ -20,3 +20,9 @@ packages:
         runtime: nodejs:18
         limits:
           memory: 256
+  - name: propelauth
+    functions:
+      - name: get-user
+        runtime: nodejs:18
+      - name: validate-jwt
+        runtime: nodejs:18
