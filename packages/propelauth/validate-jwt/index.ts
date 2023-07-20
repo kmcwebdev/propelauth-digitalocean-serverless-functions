@@ -13,7 +13,6 @@ const propelauth = propelAuth.initBaseAuth({
   },
 });
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function propelAuthValidateJwt(args: Record<string, any>) {
   const jwt = args.http.headers?.authorization;
   try {

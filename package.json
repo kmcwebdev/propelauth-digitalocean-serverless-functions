@@ -6,13 +6,8 @@
   "scripts": {
     "build": "do-functions ./packages ./build && cp ./config/package.json ./build/package.json",
     "serve": "do-functions-server ./build",
+    "lint": "eslint --ext .ts packages",
     "prepare": "husky install"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsc",
-      "pre-push": "rm ./build/.env"
-    }
   },
   "keywords": [],
   "author": "",
