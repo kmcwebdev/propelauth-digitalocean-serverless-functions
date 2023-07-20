@@ -1,0 +1,31 @@
+[
+  {
+    "apihost": "https://faas-sgp1-18bc02ac.doserverless.co",
+    "namespace": "fn-e43a3a7a-3f8a-45b6-96b7-a647ef1fe276",
+    "packageVersions": {
+      "erpv2": {
+        "version": "0.0.28",
+        "digest": "eb4f93f48b0033f197c7910641c9eb73b9a48228bc4c8164b5f634b230717b67"
+      },
+      "sample": {
+        "version": "0.0.28",
+        "digest": "5e2a8151b3d91e1a4e528b3ebe9222c6530a8d2eeb5b7bd5e32105444088a031"
+      }
+    },
+    "actionVersions": {
+      "erpv2/propelauth-get-user": {
+        "version": "0.0.28",
+        "digest": "4c1a2bc679aabeebde2d9d5fdb5e590696f7f8a915c12e1ae5b29a63d7f4d79f"
+      },
+      "erpv2/propelauth-validate-jwt": {
+        "version": "0.0.33",
+        "digest": "821b44a9a9d56ac184f8322802fb9e264c9ab5798d375240b1d64a062fdb42e5"
+      },
+      "sample/sample": {
+        "version": "0.0.28",
+        "digest": "d252e898543bc45130bd6a528dc17d0d6a11910e23ef5377bda3d4ae23572054"
+      }
+    },
+    "webHashes": {}
+  }
+]

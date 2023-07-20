@@ -10,7 +10,7 @@ const propelauth = propelAuth.initBaseAuth({
   manualTokenVerificationMetadata: {
     issuer: process.env.PROPELAUTH_ISSUER ?? "",
     verifierKey: process.env.PROPELAUTH_VERIFIER_KEY ?? "",
-  }
+  },
 });
 
 async function propelAuthValidateJwt(args: Record<string, any>) {
@@ -21,7 +21,6 @@ async function propelAuthValidateJwt(args: Record<string, any>) {
   } catch (error) {
     throw new Error(error.message);
   }
-
 }
 
 export const main = wrapFunction(propelAuthValidateJwt);

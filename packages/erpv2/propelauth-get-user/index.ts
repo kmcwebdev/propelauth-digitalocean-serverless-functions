@@ -1,7 +1,6 @@
 import { wrapFunction } from "do-functions";
 
 async function propelAuthGetUser(args: Record<string, any>) {
-
   console.log(args);
 
   return "Hello World!";

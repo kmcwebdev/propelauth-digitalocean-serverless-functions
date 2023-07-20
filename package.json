@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "do-functions ./packages ./build",
+    "build": "do-functions ./packages ./build && rm ./build/.env && cp ./config/package.json ./build/package.json",
     "serve": "do-functions-server ./build",
     "check:types": "tsc --noemit"
   },
@@ -15,10 +15,15 @@
     "@propelauth/node": "^2.1.1",
     "do-functions": "^1.2.1",
     "do-functions-server": "^1.4.0",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@types/node": "^20.4.2",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "eslint": "^8.45.0",
+    "prettier": "^3.0.0",
     "typescript": "^5.1.6"
   }
 }

@@ -4,11 +4,11 @@ packages:
        - name: propelauth-get-user
          runtime: "nodejs:18"
          limits:
-           memory: 512
+           memory: 1024
        - name: propelauth-validate-jwt
          runtime: "nodejs:18"
          limits:
-           memory: 512
+           memory: 1024
   - name: sample
     functions:
        - name: sample
