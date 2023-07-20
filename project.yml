@@ -1,16 +1,16 @@
 packages:
-  - name: erpv2
+  - name: propelauth
     environment:
       PROPELAUTH_API_KEY: "${PROPELAUTH_API_KEY}"
       PROPELAUTH_URL: "${PROPELAUTH_URL}"
       PROPELAUTH_VERIFIER_KEY: "${PROPELAUTH_VERIFIER_KEY}"
       PROPELAUTH_ISSUER: "${PROPELAUTH_ISSUER}"
     functions:
-      - name: propelauth-get-user
+      - name: get-user
         runtime: "nodejs:18"
         limits:
           memory: 1024
-      - name: propelauth-validate-jwt
+      - name: validate-jwt
         runtime: "nodejs:18"
         limits:
           memory: 1024

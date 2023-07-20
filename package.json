@@ -4,9 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "do-functions ./packages ./build && rm ./build/.env && cp ./config/package.json ./build/package.json",
+    "build": "do-functions ./packages ./build && cp ./config/package.json ./build/package.json",
     "serve": "do-functions-server ./build",
     "check:types": "tsc --noemit"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsc",
+      "pre-push": "npm run test"
+    }
   },
   "keywords": [],
   "author": "",
@@ -23,6 +29,7 @@
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^6.1.0",
     "eslint": "^8.45.0",
+    "husky": "^8.0.3",
     "prettier": "^3.0.0",
     "typescript": "^5.1.6"
   }
