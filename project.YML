@@ -1,0 +1,9 @@
+packages:
+  - name: erpv2
+    functions:
+       - name: propelauth-get-user
+         runtime: nodejs:18
+         memory: 512
+       - name: propelauth-validate-jwt
+         runtime: nodejs:18
+         memory: 512
