@@ -3,11 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "build": "do-functions ./packages ./build",
-    "serve": "do-functions-server ./build",
-    "check:types": "tsc --noemit"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,7 +12,5 @@
     "do-functions-server": "^1.4.0",
     "dotenv": "^16.3.1"
   },
-  "devDependencies": {
-    "@types/node": "^20.4.2"
-  }
+  "devDependencies": {}
 }
