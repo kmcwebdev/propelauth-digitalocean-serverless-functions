@@ -9,11 +9,11 @@ packages:
       - name: get-user
         runtime: "nodejs:18"
         limits:
-          memory: 1024
+          memory: 512
       - name: validate-jwt
         runtime: "nodejs:18"
         limits:
-          memory: 1024
+          memory: 512
   - name: sample
     functions:
       - name: sample
