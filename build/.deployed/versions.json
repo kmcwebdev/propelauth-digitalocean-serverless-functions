@@ -1,0 +1,31 @@
+[
+  {
+    "apihost": "https://faas-sgp1-18bc02ac.doserverless.co",
+    "namespace": "fn-e468ab8a-a706-486b-9869-e768a131739d",
+    "packageVersions": {
+      "propelauth": {
+        "version": "0.0.8",
+        "digest": "bb9c8e9378c6c73cc83a1f4daeccf2cd75e4d41515558045c8dc9801961d0b0a"
+      },
+      "sample": {
+        "version": "0.0.8",
+        "digest": "5e2a8151b3d91e1a4e528b3ebe9222c6530a8d2eeb5b7bd5e32105444088a031"
+      }
+    },
+    "actionVersions": {
+      "propelauth/get-user": {
+        "version": "0.0.8",
+        "digest": "8da9bba882e326389a7f4432dae2f90583e36e16ad8a49b97328d656db7558a0"
+      },
+      "propelauth/validate-jwt": {
+        "version": "0.0.12",
+        "digest": "e96f5f824b13bcf2a51b57aee742c50e8e6c135ce67af341b9e260f4289d5eb7"
+      },
+      "sample/sample": {
+        "version": "0.0.8",
+        "digest": "d252e898543bc45130bd6a528dc17d0d6a11910e23ef5377bda3d4ae23572054"
+      }
+    },
+    "webHashes": {}
+  }
+]
