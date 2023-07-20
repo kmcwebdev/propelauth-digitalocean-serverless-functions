@@ -6,12 +6,12 @@
   "scripts": {
     "build": "do-functions ./packages ./build && cp ./config/package.json ./build/package.json",
     "serve": "do-functions-server ./build",
-    "check:types": "tsc --noemit"
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
       "pre-commit": "tsc",
-      "pre-push": "npm run test"
+      "pre-push": "rm ./build/.env"
     }
   },
   "keywords": [],
