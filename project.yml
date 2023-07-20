@@ -9,3 +9,9 @@ packages:
          runtime: "nodejs:18"
          limits:
            memory: 512
+  - name: sample
+    functions:
+       - name: sample
+         runtime: "nodejs:18"
+         limits:
+           memory: 256
