@@ -7,6 +7,8 @@
     "build": "do-functions ./packages ./build && cp ./config/package.json ./build/package.json",
     "serve": "do-functions-server ./build",
     "lint": "eslint --ext .ts packages",
+    "connect:serverless": "doctl serverless connect propelauth",
+    "deploy:serverless": "pnpm build && doctl serverless deploy build",
     "prepare": "husky install"
   },
   "keywords": [],
