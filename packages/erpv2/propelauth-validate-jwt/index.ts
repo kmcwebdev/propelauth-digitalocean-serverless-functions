@@ -19,7 +19,7 @@ async function propelAuthValidateJwt(args: Record<string, any>) {
     const user = await propelauth.validateAccessTokenAndGetUser(jwt);
     return user;
   } catch (error) {
-    throw new Error(error.message)
+    throw new Error(error.message);
   }
 
 }

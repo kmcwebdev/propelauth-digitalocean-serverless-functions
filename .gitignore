@@ -1,3 +1,7 @@
 node_modules
 build
+package.json
+pnpm-lock.yaml
+tsconfig.json
 .env
+.vscode
