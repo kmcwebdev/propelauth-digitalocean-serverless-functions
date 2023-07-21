@@ -1,4 +1,3 @@
-import { wrapFunction } from "do-functions";
 import { config } from "dotenv";
 import * as propelAuth from "@propelauth/node";
 
@@ -14,14 +13,27 @@ const propelauth = propelAuth.initBaseAuth({
 });
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-async function propelAuthValidateJwt(args: Record<string, any>) {
+export async function main(args: Record<string, any>) {
   const jwt = args.http.headers?.authorization;
   try {
     const user = await propelauth.validateAccessTokenAndGetUser(jwt);
-    return user;
+    return {
+      statusCode: 200,
+      body: {
+        success: true,
+        statusCode: 200,
+        data: user,
+      },
+    };
   } catch (error) {
-    throw new Error(error.message);
+    return {
+      statusCode: 401,
+      body: {
+        success: false,
+        statusCode: 401,
+        data: null,
+        message: "Unauthorized",
+      },
+    };
   }
 }
-
-export const main = wrapFunction(propelAuthValidateJwt);

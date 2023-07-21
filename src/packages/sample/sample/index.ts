@@ -1,8 +1,7 @@
-import { wrapFunction } from "do-functions";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { z } from "zod";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-async function sample(args: Record<string, any>) {
+export async function main(args: Record<string, any>) {
   if (args.http.method !== "POST") {
     throw new Error("Method not allowed");
   }
@@ -23,14 +22,23 @@ async function sample(args: Record<string, any>) {
 
   if (!validateSchema.success) {
     return {
-      success: false,
+      headers: {
+        "Content-Type": "application/json",
+      },
       statusCode: 400,
-      data: null,
-      message: validateSchema.error.errors[0]?.message,
+      body: {
+        success: false,
+        statusCode: 400,
+        data: null,
+        message: validateSchema.error.errors[0]?.message,
+      },
     };
   }
 
-  return args;
+  return {
+    statusCode: 200,
+    body: {
+      message: `Hello ${args.body.name}`,
+    },
+  };
 }
-
-export const main = wrapFunction(sample);
