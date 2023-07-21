@@ -3,20 +3,11 @@
   "version": "1.0.0",
   "description": "Serverless functions for propelauth",
   "main": "index.js",
-  "tsup": {
-    "entry": [
-      "src/packages"
-    ],
-    "outDir": "dist/packages",
-    "splitting": false,
-    "sourcemap": false,
-    "clean": true
-  },
   "scripts": {
-    "build": "tsup && cp ./config/package.json ./dist/package.json && cp project.yml ./dist/project.yml && cp .env ./dist/.env",
-    "lint": "eslint --ext .ts src",
+    "build": "do-functions ./packages ./build && cp ./config/package.json ./build/package.json",
+    "lint": "eslint --ext .ts packages",
     "connect:serverless": "doctl serverless connect propelauth",
-    "deploy:serverless": "pnpm build && doctl serverless deploy dist",
+    "deploy:serverless": "pnpm build && doctl serverless deploy build",
     "prepare": "husky install"
   },
   "author": "Christian Angelo M Sulit",
@@ -30,6 +21,7 @@
     "@types/node": "^20.4.2",
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^6.1.0",
+    "do-functions": "^1.2.1",
     "eslint": "^8.45.0",
     "husky": "^8.0.3",
     "prettier": "^3.0.0",

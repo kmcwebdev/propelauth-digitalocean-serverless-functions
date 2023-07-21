@@ -1,0 +1,60 @@
+[
+  {
+    "apihost": "https://faas-sgp1-18bc02ac.doserverless.co",
+    "namespace": "fn-e468ab8a-a706-486b-9869-e768a131739d",
+    "packageVersions": {
+      "propelauth": {
+        "version": "0.0.21",
+        "digest": "6ca462720ff2ca84fbc3ecccaf9ec6bbd55dc31eade1ba55d738973636c54c09"
+      },
+      "sample": {
+        "version": "0.0.21",
+        "digest": "5e2a8151b3d91e1a4e528b3ebe9222c6530a8d2eeb5b7bd5e32105444088a031"
+      }
+    },
+    "actionVersions": {
+      "propelauth/get-user": {
+        "version": "0.0.21",
+        "digest": "abde94801200d0c289be40025555d515cee1ac7f37335492df2a92f4906f463b"
+      },
+      "propelauth/validate-jwt": {
+        "version": "0.0.32",
+        "digest": "b53bfc9e61b49c76531d0dcb394a7faca2de55680c012f8e115985cd7f064553"
+      },
+      "sample/sample": {
+        "version": "0.0.21",
+        "digest": "fff48506046dabf3b1a2e03836063a97b70f35bf498aafc5535298f63301cbd4"
+      }
+    },
+    "webHashes": {}
+  },
+  {
+    "apihost": "https://faas-sgp1-18bc02ac.doserverless.co",
+    "namespace": "fn-7bbe3907-cc06-4594-bfe1-5addd349f944",
+    "packageVersions": {
+      "propelauth": {
+        "version": "0.0.1",
+        "digest": "6ca462720ff2ca84fbc3ecccaf9ec6bbd55dc31eade1ba55d738973636c54c09"
+      },
+      "sample": {
+        "version": "0.0.1",
+        "digest": "5e2a8151b3d91e1a4e528b3ebe9222c6530a8d2eeb5b7bd5e32105444088a031"
+      }
+    },
+    "actionVersions": {
+      "propelauth/get-user": {
+        "version": "0.0.1",
+        "digest": "abde94801200d0c289be40025555d515cee1ac7f37335492df2a92f4906f463b"
+      },
+      "propelauth/validate-jwt": {
+        "version": "0.0.1",
+        "digest": "b53bfc9e61b49c76531d0dcb394a7faca2de55680c012f8e115985cd7f064553"
+      },
+      "sample/sample": {
+        "version": "0.0.1",
+        "digest": "fff48506046dabf3b1a2e03836063a97b70f35bf498aafc5535298f63301cbd4"
+      }
+    },
+    "webHashes": {}
+  }
+]

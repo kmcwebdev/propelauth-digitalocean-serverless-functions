@@ -14,5 +14,5 @@
     "no-console": "error",
     "no-unused-vars": "warn"
   },
-  "ignorePatterns": ["node_modules", "dist"]
+  "ignorePatterns": ["node_modules", "build"]
 }
