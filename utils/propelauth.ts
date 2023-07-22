@@ -8,6 +8,6 @@ export const propelauth = propelAuth.initBaseAuth({
   apiKey: process.env.PROPELAUTH_API_KEY ?? "",
   manualTokenVerificationMetadata: {
     issuer: process.env.PROPELAUTH_ISSUER ?? "",
-    verifierKey: `${process.env.PROPELAUTH_VERIFIER_KEY}` ?? "",
+    verifierKey: process.env.PROPELAUTH_VERIFIER_KEY ?? "",
   },
 });

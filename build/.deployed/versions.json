@@ -4,29 +4,29 @@
     "namespace": "fn-7bbe3907-cc06-4594-bfe1-5addd349f944",
     "packageVersions": {
       "propelauth": {
-        "version": "0.0.28",
+        "version": "0.0.29",
         "digest": "bb9c8e9378c6c73cc83a1f4daeccf2cd75e4d41515558045c8dc9801961d0b0a"
       },
       "sample": {
-        "version": "0.0.28",
+        "version": "0.0.29",
         "digest": "c981ae19129f61ec9a61ed9cc4aae79356e0e53c02008489475ed3dcbac69707"
       }
     },
     "actionVersions": {
       "propelauth/get-user": {
-        "version": "0.0.32",
-        "digest": "d842ced77b8b3da50094d6f919259c6338a177a5ebb53b5da372c7a5bb854b3b"
+        "version": "0.0.34",
+        "digest": "e436ba46035226407e8ad99545859ca88104c6fc36accf37314acfb120312255"
       },
       "propelauth/validate-jwt": {
-        "version": "0.0.48",
-        "digest": "db39652d00af9563725ebc1aa9f38436de9e042bc1d10d60eaa4666fc5dcf0c3"
+        "version": "0.0.50",
+        "digest": "cd671650014ac2f7bd324b7f7b75b76b87aaf054b10640eb2d8c0c1906528180"
       },
       "sample/get-with-query": {
-        "version": "0.0.24",
+        "version": "0.0.25",
         "digest": "5c7cda4cb0a08160e0ed109672e633546d91a618db2c8194a019a9de651fb84f"
       },
       "sample/post-with-body": {
-        "version": "0.0.24",
+        "version": "0.0.25",
         "digest": "79466bec4d44d2c93532b50516d52bbc07ab0f19f0c5e2b273ad09e71eb4a264"
       }
     },
