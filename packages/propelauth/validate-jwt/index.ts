@@ -1,28 +1,58 @@
-import { config } from "dotenv";
-import * as propelAuth from "@propelauth/node";
-
-config();
-
-const propelauth = propelAuth.initBaseAuth({
-  authUrl: process.env.PROPELAUTH_URL ?? "",
-  apiKey: process.env.PROPELAUTH_API_KEY ?? "",
-  manualTokenVerificationMetadata: {
-    issuer: process.env.PROPELAUTH_ISSUER ?? "",
-    verifierKey: process.env.PROPELAUTH_VERIFIER_KEY ?? "",
-  },
-});
+import { z } from "zod";
+import { collectProperties } from "../../../utils/collectProperties";
+import { propelauth } from "../../../utils/propelauth";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function main(args: Record<string, any>) {
   const jwt = args.http.headers?.authorization;
+  const properties = ["orgName"];
+
+  const params = collectProperties(args, properties);
+
+  const schema = z.object({
+    orgName: z
+      .enum(["KMC Solutions", "KMC Community"], {
+        description: "The name of the organization",
+        invalid_type_error: "Organization name must be a string",
+      })
+      .default("KMC Solutions"),
+  });
+
   try {
-    const user = await propelauth.validateAccessTokenAndGetUser(jwt);
+    const query = await schema.safeParseAsync(params);
+
+    if (!query.success) {
+      return {
+        statusCode: 400,
+        body: {
+          success: false,
+          statusCode: 400,
+          data: null,
+          message: query.error.errors[0]?.message,
+        },
+      };
+    }
+
+    const propelauthUser =
+      await propelauth.validateAccessTokenAndGetUserWithOrgInfo(jwt, {
+        orgName: query.data.orgName,
+      });
+
     return {
       statusCode: 200,
       body: {
         success: true,
         statusCode: 200,
-        data: user,
+        data: {
+          user: {
+            userId: propelauthUser.user.userId,
+            email: propelauthUser.user.email,
+            firstName: propelauthUser.user.firstName,
+            lastName: propelauthUser.user.lastName,
+            username: propelauthUser.user.username,
+          },
+          orgData: propelauthUser.orgMemberInfo,
+        },
       },
     };
   } catch (error) {

@@ -9,14 +9,18 @@ packages:
       - name: get-user
         runtime: nodejs:18
         limits:
-          memory: 512
+          memory: 1024
       - name: validate-jwt
         runtime: nodejs:18
         limits:
           memory: 1024
   - name: sample
     functions:
-      - name: sample
+      - name: get-with-query
+        runtime: nodejs:18
+        limits:
+          memory: 256
+      - name: post-with-body
         runtime: nodejs:18
         limits:
           memory: 256

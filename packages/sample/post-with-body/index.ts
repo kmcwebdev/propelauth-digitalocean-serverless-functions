@@ -22,9 +22,6 @@ export async function main(args: Record<string, any>) {
 
   if (!validateSchema.success) {
     return {
-      headers: {
-        "Content-Type": "application/json",
-      },
       statusCode: 400,
       body: {
         success: false,
@@ -38,7 +35,9 @@ export async function main(args: Record<string, any>) {
   return {
     statusCode: 200,
     body: {
-      message: `Hello ${args.body.name}`,
+      success: true,
+      statusCode: 200,
+      data: `Hello ${args.body.name}`,
     },
   };
 }

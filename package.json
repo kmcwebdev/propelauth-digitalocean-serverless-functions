@@ -4,7 +4,7 @@
   "description": "Serverless functions for propelauth",
   "main": "index.js",
   "scripts": {
-    "build": "do-functions ./packages ./build && cp ./config/package.json ./build/package.json",
+    "build": "rm -rf build && do-functions ./packages ./build && cp ./config/package.json ./build/package.json",
     "lint": "eslint --ext .ts packages",
     "connect:serverless": "doctl serverless connect propelauth",
     "deploy:serverless": "pnpm build && doctl serverless deploy build",
