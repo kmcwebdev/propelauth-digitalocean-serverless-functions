@@ -3,7 +3,15 @@ import { z } from "zod";
 
 export async function main(args: Record<string, any>) {
   if (args.http.method !== "POST") {
-    throw new Error("Method not allowed");
+    return {
+      statusCode: 405,
+      body: {
+        success: false,
+        statusCode: 405,
+        data: null,
+        message: "Method not allowed",
+      },
+    };
   }
 
   const schema = z.object({

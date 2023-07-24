@@ -1,5 +1,5 @@
 {
-  "name": "do-functions",
+  "name": "propelauth-do-functions",
   "version": "1.0.0",
   "description": "Serverless functions for propelauth",
   "main": "index.js",
@@ -25,7 +25,6 @@
     "eslint": "^8.45.0",
     "husky": "^8.0.3",
     "prettier": "^3.0.0",
-    "tsup": "^7.1.0",
     "typescript": "^5.1.6"
   }
 }
