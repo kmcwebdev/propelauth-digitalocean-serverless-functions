@@ -9,8 +9,12 @@ packages:
       - name: get-user
         runtime: "nodejs:18"
         limits:
+          memory: 256
+      - name: validate-jwt-get-user-with-org-info
+        runtime: "nodejs:18"
+        limits:
           memory: 1024
-      - name: validate-jwt
+      - name: validate-jwt-get-user-with-org-info-with-permission
         runtime: "nodejs:18"
         limits:
           memory: 1024

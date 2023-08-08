@@ -4,6 +4,18 @@ import { propelauth } from "../../../utils/propelauth";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function main(args: Record<string, any>) {
+  if (args.http.method !== "GET") {
+    return {
+      statusCode: 405,
+      body: {
+        success: false,
+        statusCode: 405,
+        data: null,
+        message: "Method not allowed",
+      },
+    };
+  }
+
   const jwt = args.http.headers?.authorization;
   const properties = ["orgName"];
 
