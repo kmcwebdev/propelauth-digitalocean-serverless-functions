@@ -1,0 +1,47 @@
+[
+  {
+    "apihost": "https://faas-sgp1-18bc02ac.doserverless.co",
+    "namespace": "fn-7bbe3907-cc06-4594-bfe1-5addd349f944",
+    "packageVersions": {
+      "propelauth": {
+        "version": "0.0.36",
+        "digest": "9f5564634e548be0675a0ce7cde384a97f4cd5a842718af39cf1a8f449e3380c"
+      },
+      "sample": {
+        "version": "0.0.36",
+        "digest": "c981ae19129f61ec9a61ed9cc4aae79356e0e53c02008489475ed3dcbac69707"
+      }
+    },
+    "actionVersions": {
+      "propelauth/create-access-token": {
+        "version": "0.0.3",
+        "digest": "0032cfa147ed88befa33050d56c63fab0b319fd66b661030d1303465bd2674eb"
+      },
+      "propelauth/get-propelauth-user": {
+        "version": "0.0.3",
+        "digest": "a6f2bebeab463bbe7f7e7e0ffc3e49ec342f7a8401086c8ef2edf67598c6bb80"
+      },
+      "propelauth/validate-jwt-get-user-with-org-info-with-permission": {
+        "version": "0.0.5",
+        "digest": "2bc47c8b7f1670aa942f2b4a97abae56945ca12614fcca6b7f0ad7dd7e896271"
+      },
+      "propelauth/validate-jwt-get-user-with-org-info": {
+        "version": "0.0.5",
+        "digest": "93e6969578ca1a9d022d840e7d711880610f8b18a71c0c51b34e79155d0777f7"
+      },
+      "propelauth/validate-jwt-get-user": {
+        "version": "0.0.1",
+        "digest": "a191516837f9022cfd1f9b648a3483f3f5f371b33b8fe4694a4a34410ba42248"
+      },
+      "sample/get-with-query": {
+        "version": "0.0.32",
+        "digest": "5c7cda4cb0a08160e0ed109672e633546d91a618db2c8194a019a9de651fb84f"
+      },
+      "sample/post-with-body": {
+        "version": "0.0.32",
+        "digest": "184b0cbaca96c70465c2cd62656160c53ba0323c081522826e6e40d76c31917d"
+      }
+    },
+    "webHashes": {}
+  }
+]

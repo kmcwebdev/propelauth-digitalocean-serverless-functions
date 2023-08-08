@@ -6,10 +6,18 @@ packages:
       PROPELAUTH_VERIFIER_KEY: ${PROPELAUTH_VERIFIER_KEY}
       PROPELAUTH_ISSUER: ${PROPELAUTH_ISSUER}
     functions:
-      - name: get-user
+      - name: create-access-token
         runtime: nodejs:18
         limits:
-          memory: 256
+          memory: 1024
+      - name: get-propelauth-user
+        runtime: nodejs:18
+        limits:
+          memory: 1024
+      - name: validate-jwt-get-user
+        runtime: nodejs:18
+        limits:
+          memory: 1024
       - name: validate-jwt-get-user-with-org-info
         runtime: nodejs:18
         limits:
@@ -18,8 +26,6 @@ packages:
         runtime: nodejs:18
         limits:
           memory: 1024
-      - name: access-token
-        runtime: nodejs:18
   - name: sample
     functions:
       - name: get-with-query
